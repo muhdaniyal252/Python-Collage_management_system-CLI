@@ -1,1 +1,3 @@
-# Python-Collage_management_system-CLI
+A simple collage management system on python cli
+
+in development
