@@ -11,7 +11,6 @@ class Administration:
         self.name = name
         self.email = email
         self.password = password
-        self.i = None
 
     def get_header(self):
         return ['ID','Name','Email','Password']
