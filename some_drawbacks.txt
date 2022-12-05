@@ -1,0 +1,8 @@
+1. no GUI
+2. no sessions
+3. no constraints (any id of field can be used in subject addition)
+4. no application login
+
+
+for cyclic import 
+https://stackoverflow.com/questions/35012360/can-import-statements-be-used-anywhere-besides-the-beginning-of-a-java-file

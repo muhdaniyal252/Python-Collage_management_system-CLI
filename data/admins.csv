@@ -1,2 +1,3 @@
 ID,Name,Email,Password
-1,fayyaz,fayyaz@gmail.com,abc
+1,Admin,admin@cms.com,admin
+2,Fayyaz,fayyaz@gmail.com,fayyaz

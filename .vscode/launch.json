@@ -8,7 +8,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "/home/daniyal/working/misc_work/Python-Collage_management_system-CLI/main.py",
+            "program": "/home/daniyal/working/Python-Collage_management_system-CLI/main.py",
             "console": "integratedTerminal",
             "justMyCode": true
         }

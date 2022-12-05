@@ -1,4 +1,4 @@
-from data import fields
+from data import fields,get_id
 from database.administration import Field
 
 def field_CRUD():
@@ -23,7 +23,7 @@ def field_CRUD():
 
 def add_field():
     name = input('Name of Field: ')
-    _id = 1 if len(fields) == 0 else sorted(fields,key=lambda x: x._id)[-1]._id + 1
+    _id = get_id(fields)
     field = Field(_id, name)
     fields.append(field)
     print('Added Successfully')
@@ -39,7 +39,7 @@ def update_field():
         return
     _id = int(_id)
     for i in fields:
-        if i._id == _id:
+        if i._id == int(_id):
             name = input(f'Enter Field Name (current name is {i.name}, press enter to keep it as it is): ')
             i.name = name or i.name
             return
@@ -52,7 +52,7 @@ def delete_field():
     _id = int(_id)
     index = 0
     for idx,i in enumerate(fields):
-        if i._id == _id:
+        if i._id == int(_id):
             index = idx
             break
     if index:

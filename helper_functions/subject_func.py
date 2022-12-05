@@ -1,4 +1,4 @@
-from data import fields,subjects
+from data import fields,subjects,get_id
 from database.administration import Subject
 from helper_functions.field_func import list_fields
 
@@ -26,7 +26,7 @@ def add_subject():
     list_fields()
     name = input('Name of Subject: ')
     field_id = input('ID of Field: ')
-    _id = 1 if len(subjects) == 0 else sorted(subjects,key=lambda x: x._id)[-1]._id + 1
+    _id = get_id(subjects)
     subject = Subject(_id, name, field_id)
     subjects.append(subject)
     print('Added Successfully')
@@ -42,7 +42,7 @@ def update_subject():
         return
     _id = int(_id)
     for i in subjects:
-        if i._id == _id:
+        if i._id == int(_id):
             name = input(f'Enter Subject Name (current name is {i.name}, press enter to keep it as it is): ')
             i.name = name or i.name
             field_id = input(f'Enter Field ID (current name is {i.field_id}, press enter to keep it as it is): ')
@@ -57,7 +57,7 @@ def delete_subject():
     _id = int(_id)
     index = 0
     for idx,i in enumerate(fields):
-        if i._id == _id:
+        if i._id == int(_id):
             index = idx
             break
     if index:

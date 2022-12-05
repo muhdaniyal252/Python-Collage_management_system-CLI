@@ -1,13 +1,19 @@
-from database.administration import *
-from database.person_app import *
-from database.person import *
-from helper_functions.admin_functions import *
-from helper_functions.student_functions import *
+from helper_functions.admin_functions import adminportal
+from helper_functions.person_application import student_application,teacher_application
 from data import *
 
 
+def login():
+    email = input('Enter Email: ')
+    password = input('Enter Password: ')
+    for i in admins:
+        if i.email == email and i.password == password:
+            adminportal()
+        else: 
+            print('incorrect email or password')
 
 def main():
+    get_data()
     while True:
         print('Welcome to Portal. \nPlease enter desired option')
         print('1. Login')
@@ -17,23 +23,15 @@ def main():
         choice = input('Choice: ')
         if choice == '1':
             adminportal()
-            email = input('Enter Email: ')
-            password = input('Enter Password: ')
-            for i in admins:
-                if i.email == email and i.password == password:
-                    adminportal()
-                    continue
-                else: 
-                    print('incorrect email or password')
+            login()
         elif choice == '2':
-            student_application_application()
+            student_application()
         elif choice == '3':
-            pass
+            teacher_application()
         elif choice == '4':
             save_data()
 
 
 
-if __name__ == '__main__': 
-    get_data()
+if __name__ == '__main__':
     main()
