@@ -2,6 +2,7 @@ from helper_functions.field_func import field_CRUD
 from helper_functions.subject_func import subject_CRUD
 from data import admins,is_unique_email,get_id
 from database.administration import Administration
+from helper_functions.application_func import teacher_applicatoin_operations,student_applicatoin_operations
 
 
 def admin_CRUD():
@@ -77,6 +78,8 @@ def adminportal():
         print('2. Admin CRUD')
         print('3. Field CRUD')
         print('4. Subject CRUD')
+        print('5. Teachers\' Applications')
+        print('6. Students\' Applications')
         choice = input('Choice: ')
         if choice == '1':
             return
@@ -86,3 +89,7 @@ def adminportal():
             field_CRUD()
         elif choice == '4':
             subject_CRUD()
+        elif choice == '5':
+            teacher_applicatoin_operations()
+        elif choice == '6':
+            student_applicatoin_operations()

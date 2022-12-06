@@ -20,6 +20,7 @@ def main():
         print('2. Apply for Admission')
         print('3. Apply for Job')
         print('4. Save Data')
+        print('4. Save and Exit')
         choice = input('Choice: ')
         if choice == '1':
             adminportal()
@@ -30,8 +31,10 @@ def main():
             teacher_application()
         elif choice == '4':
             save_data()
-
-
+        elif choice == '5':
+            save_data()
+            exit()
+            
 
 if __name__ == '__main__':
     main()

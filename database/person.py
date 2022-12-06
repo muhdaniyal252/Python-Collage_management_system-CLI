@@ -15,9 +15,11 @@ class Person:
 
 class Student(Person):
 
-    def __init__(self, name, email, password, phone, field_id, *args) -> None:
+    def __init__(self, name, email, password, phone, field_id, annual_year, *args) -> None:
         super().__init__(name, email, password, phone)
         self.field_id = field_id
+        self.annual_year = annual_year
+
         
 
 

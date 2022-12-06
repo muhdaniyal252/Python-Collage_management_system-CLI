@@ -6,7 +6,7 @@ class PersonApp(Person):
 
     def __init__(self, _id, name, email, password, phone,date,status,*args) -> None:
         super().__init__(_id, name, email, password, phone)
-        try: self.date = datetime.strptime(date,'%Y-%m-%d')
+        try: self.date = datetime.strptime(date,'%Y-%m-%d').date()
         except: self.date = date
         self.status = status
 
