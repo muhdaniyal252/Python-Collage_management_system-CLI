@@ -1,6 +1,5 @@
 from database.person import Person
 from datetime import datetime
-from data import student_applications,teacher_applications,get_id
 
 class PersonApp(Person):
 
